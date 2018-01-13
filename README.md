@@ -15,7 +15,8 @@ hooking up an external EPROM that writes a dumping program into RAM, then
 jumps to RAM. While that is running, I change the mode pin to select the
 internal ROM. The external bus is disabled, the internal ROM is enabled, but
 the code in RAM keeps running and the internal ROM is dumped out. I've run it
-many times on several chips and it has been perfectly reliable.
+many times on a number of different MB89677AR, MB89623R, and MB89625R chips.
+It has been perfectly reliable.
 
 ## Hardware
 

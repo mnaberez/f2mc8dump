@@ -52,8 +52,8 @@ internal ROM instead. Capture the output with a logic analyzer and let it
 run for a couple minutes so the entire memory space is dumped several times.
 Save the capture to a file.
 
-Use the Python script under the `software/` directory to individual ROM images
-from the logic analyzer capture.
+Use the Python script under the `host/` directory to split individual
+ROM images from the logic analyzer capture.
 
 ## Author
 

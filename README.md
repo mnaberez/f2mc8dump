@@ -1,5 +1,7 @@
 # f2mc8dump
 
+![Photo](https://user-images.githubusercontent.com/52712/34909015-cdebd7d4-f84e-11e7-86c4-c4403cf749d8.png)
+
 ## Overview
 
 Some Fujitsu F2MC-8L microcontrollers with internal mask ROM also have an

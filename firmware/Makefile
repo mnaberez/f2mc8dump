@@ -9,7 +9,7 @@ rom.lst: rom.asm
 	rm -f rom.hlr
 
 clean:
-	rm -f rom.bin rom.hex rom.hlr rom.lst rom.lst
+	rm -f rom.bin rom.hex rom.hlr rom.lst
 
 program:
 	dprom /dev/tty.usbserial-FT0G8F41 rom.hex

@@ -36,7 +36,7 @@ capture the output from the dumping hardware.
 
 ## Firmware
 
-Assemble the dumping firmware in the `firmware/` directory using the [asf2mc8](https://shop-pdp.net/ashtml/asf2mc.htm)
+Assemble the dumping firmware in the `firmware/` directory using the [asf2mc8](http://shop-pdp.net/ashtml/asf2mc.htm)
 assembler and burn it into the EPROM.
 
 ## Dumping

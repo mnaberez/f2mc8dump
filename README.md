@@ -4,19 +4,23 @@
 
 ## Overview
 
-Some Fujitsu F2MC-8L microcontrollers with internal mask ROM also have an
-external bus capability (see the [catalog](https://web.archive.org/web/20170514004456/http://www.fujitsu.com/downloads/MICRO/fme/micros/micros_2006.pdf)). A mode pin selects external bus mode and then some GPIO pins are repurposed
-as address and data lines, like on the 8051 or AVRs. In external bus mode, an
-external ROM is used. There is no access to the internal ROM when external bus
-mode is active.
+Some Fujitsu F2MC-8L microcontrollers have an
+external bus capability (see the [catalog](https://web.archive.org/web/20170514004456/http://www.fujitsu.com/downloads/MICRO/fme/micros/micros_2006.pdf)).
+I found that the external bus can be used to dump the contents of the
+internal ROM, which is not normally accessible.
 
-I dumped the internal mask ROM of the several F2MC8-L microcontrollers by
-hooking up an external EPROM that writes a dumping program into RAM, then
-jumps to RAM. While that is running, I change the mode pin to select the
-internal ROM. The external bus is disabled, the internal ROM is enabled, but
-the code in RAM keeps running and the internal ROM is dumped out. I've run it
-many times on a number of different MB89677AR, MB89623R, and MB89625R chips.
-It has been perfectly reliable.
+A mode pin enables the external bus.  In this mode, the internal ROM is disabled and its address space is redirected
+to the external bus.  I dumped the internal ROM of the several F2MC8-L microcontrollers by hooking up an external EPROM that wrote a dumping program into RAM, then jumped to RAM.  While code was executing from RAM, I changed the mode pin.  The external bus was disabled, the internal ROM was enabled, but code kept executing from RAM and dumped out the contents of the internal ROM.
+
+## Tested
+
+I developed this method to extract the firmware from the Volkswagen Premium IV car radios made by Clarion.  These radios contain the following microcontrollers:
+
+ - MB89623R
+ - MB89625R
+ - MB89677AR
+
+I successfully extracted the internal ROM code from all of them.  I've also tried samples of the above chips from other products and was able to extract the code from them as well.
 
 ## Hardware
 

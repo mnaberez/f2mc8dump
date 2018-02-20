@@ -10,7 +10,7 @@ I found that the external bus can be used to dump the contents of the
 internal ROM, which is not normally accessible.
 
 A mode pin enables the external bus.  In this mode, the internal ROM is disabled and its address space is redirected
-to the external bus.  I dumped the internal ROM of the several F2MC8-L microcontrollers by hooking up an external EPROM that wrote a dumping program into RAM, then jumped to RAM.  While code was executing from RAM, I changed the mode pin.  The external bus was disabled, the internal ROM was enabled, but code kept executing from RAM and dumped out the contents of the internal ROM.
+to the external bus.  I dumped the internal ROM of the several F2MC-8L microcontrollers by hooking up an external EPROM that wrote a dumping program into RAM, then jumped to RAM.  While code was executing from RAM, I changed the mode pin.  The external bus was disabled, the internal ROM was enabled, but code kept executing from RAM and dumped out the contents of the internal ROM.
 
 ## Tested
 

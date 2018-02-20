@@ -43,7 +43,7 @@ capture the output from the dumping hardware.
 Assemble the dumping firmware in the `firmware/` directory using the [asf2mc8](http://shop-pdp.net/ashtml/asf2mc.htm)
 assembler and burn it into the EPROM.
 
-## Dumping
+## Dump
 
 Build the hardware and power it up in external bus mode (MOD0=Vcc). It will
 immediately begin dumping the memory space out P30-P37 with /STROBE on P40
@@ -59,6 +59,10 @@ Save the capture to a file.
 
 Use the Python script under the `host/` directory to split individual
 ROM images from the logic analyzer capture.
+
+## Disassemble
+
+After a binary has been obtained, use [f2mc8dasm](https://github.com/mnaberez/f2mc8dasm) to disassemble it.
 
 ## Author
 

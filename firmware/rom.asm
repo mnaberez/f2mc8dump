@@ -54,17 +54,17 @@ reset:
     mov ram+0x08, #0x06     ;06 00     mov a, @ix+0  ;A = byte at address IX
     mov ram+0x09, #0x00
     mov ram+0x0a, #0x45     ;45 0c     mov pdr3, a   ;Put byte on P30-P37
-    mov ram+0x0b, #0x0c
+    mov ram+0x0b, #<pdr3
     mov ram+0x0c, #0x85     ;85 0e 00  mov pdr4, #0  ;P40 = Low (/STROBE)
-    mov ram+0x0d, #0x0e
+    mov ram+0x0d, #<pdr4
     mov ram+0x0e, #0x00
     mov ram+0x0f, #0x85     ;85 0e 01  mov pdr4, #1  ;P40 = High (/STROBE)
-    mov ram+0x10, #0x0e
+    mov ram+0x10, #<pdr4
     mov ram+0x11, #0x01
     mov ram+0x12, #0xc2     ;c2        incw ix
     mov ram+0x13, #0x21     ;21 00 88  jmp ram+0x08
-    mov ram+0x14, #0x00
-    mov ram+0x15, #0x88
+    mov ram+0x14, #>(ram+0x08)
+    mov ram+0x15, #<(ram+0x08)
 
     ;Start dumping
 

@@ -14,7 +14,7 @@ to the external bus.  I dumped the internal ROM of the several F2MC-8L microcont
 
 ## Tested
 
-I developed this method to extract the firmware from the Volkswagen Premium IV car radios made by Clarion.  These radios contain the following microcontrollers:
+I developed this method to extract the firmware from the [Volkswagen Premium IV](https://github.com/mnaberez/vwradio) car radios made by Clarion.  These radios contain the following microcontrollers:
 
  - MB89623R
  - MB89625R

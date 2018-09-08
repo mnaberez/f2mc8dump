@@ -1,5 +1,1 @@
-*.bin
-*.hex
-*.hlr
-*.lst
-
+out.*

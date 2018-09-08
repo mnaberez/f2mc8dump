@@ -10,11 +10,10 @@ before_install:
   - wget -q -U travis http://6502.org/tools/asm/u05500.zip
   - unzip -q av5p00.zip
   - unzip -q -o u05500.zip
-  - make -C asxv5pxx/asxmak/linux/build asf2mc8
+  - make -C asxv5pxx/asxmak/linux/build asf2mc8 aslink
   - export PATH=$PATH:$PWD/asxv5pxx/asxmak/linux/build
 
 language: python
 
 script:
   - make -C firmware
-

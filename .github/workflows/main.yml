@@ -22,3 +22,11 @@ jobs:
 
     - name: Build the firmware
       run: make -C firmware
+
+    - name: 'Upload build artifacts'
+      uses: actions/upload-artifact@v3
+      with:
+        name: build-artifacts
+        path: |
+            firmware/out.bin
+            firmware/out.lst

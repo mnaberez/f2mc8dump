@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "f2mcdump")(type "KiCad")(uri "${KIPRJMOD}/f2mcdump.kicad_sym")(options "")(descr ""))
+)

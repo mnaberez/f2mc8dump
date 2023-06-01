@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "f2mc8dump")(type "KiCad")(uri "${KIPRJMOD}/f2mc8dump.pretty")(options "")(descr ""))
+)

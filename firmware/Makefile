@@ -1,11 +1,9 @@
 all: clean out.bin
 
 out.bin:
-	cp -f rom.asm out.asm
-	asf2mc8 -l -o out.asm
-	rm -f out.asm
+	asf2mc8 -l -o+out rom.asm
 	aslink -i out
-	srec_cat out.ihx -intel -offset -0xe000 -o out.bin -binary
+	srec_cat out.hex -intel -offset -0xe000 -o out.bin -binary
 
 program: out.bin
 	srec_cat out.bin -binary -o out.dphex -intel -address-length=2 -line-length=44 -crlf
